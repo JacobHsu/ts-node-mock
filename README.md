@@ -20,6 +20,8 @@ HTTP request logger middleware for node.js
 
 https://vercel.com/jacobhsu/vben-node-mock
 
+https://vben-node-mock.vercel.app/mock-api/v1/user
+
 ## References
 
 EditorConfig for VS Code
