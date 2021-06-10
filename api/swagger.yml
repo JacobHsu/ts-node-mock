@@ -4,23 +4,23 @@ info:
   version: 1.0.0
   title: Mock API
   contact:
-    email: armourcy@email.com
+    email: jacob.hsu.tw@email.com
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
   - url: /mock-api/v1
 tags:
-  - name: transactions
-    description: Transactions data related api.
+  - name: mock
+    description: Mock data related api.
 paths:
-  /transactions:
+  /user:
     get:
       tags:
-        - transactions
-      summary: Get Transaction List
-      description: Return a list of transaction.
-      operationId: getTransactions
+        - user
+      summary: Get Mock List
+      description: Return a list of mock.
+      operationId: getUserInfo
       responses:
         200:
           description: OK
