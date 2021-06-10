@@ -20,7 +20,11 @@ HTTP request logger middleware for node.js
 
 https://vercel.com/jacobhsu/vben-node-mock
 
-https://vben-node-mock.vercel.app/mock-api/v1/user
+https://vben-node-mock-jacobhsu.vercel.app/mock-api/v1/user
+
+[Conflicting Configuration Files](https://vercel.com/docs/platform/frequently-asked-questions?query=now.json#conflicting-configuration-files)
+
+For backwards compatability purposes, there are two naming conventions for configuration files used by Vercel CLI (for example `vercel.json` and `now.json`). 
 
 ## References
 
