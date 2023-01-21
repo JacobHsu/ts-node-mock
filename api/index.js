@@ -59,6 +59,7 @@ const server = http_1.default.createServer(app);
 server.listen(port);
 server.on('error', onError);
 console.log('http://localhost:' + port + '/mock-api/v1/user');
+console.log('http://localhost:' + port + '/mock-api/v1/users');
 // Event listener for HTTP server "error" event.
 function onError(error) {
   if (error.syscall !== 'listen') {

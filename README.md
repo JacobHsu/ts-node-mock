@@ -2,6 +2,11 @@
 
 Armour / [vue-typescript-admin-mock-server](https://github.com/Armour/vue-typescript-admin-mock-server)
 
+## local
+
+`yarn mock`  
+http://localhost:6580/mock-api/v1/user
+
 ## npm
 
 tslib
