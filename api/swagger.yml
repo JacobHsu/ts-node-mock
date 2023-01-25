@@ -77,6 +77,56 @@ paths:
                             $ref: '#/components/schemas/User'
           401:
             $ref: '#/components/responses/Unauthorized'
+  /users/login:
+    post:
+      tags:
+        - users
+      summary: Logs user into the system
+      description: Use username and password to login.
+      operationId: login
+      parameters:
+        - name: username
+          in: query
+          required: true
+          description: The user name for login.
+          schema:
+            $ref: '#/components/schemas/User/properties/username'
+        - name: password
+          in: query
+          required: true
+          description: The password for login in clear text.
+          schema:
+            $ref: '#/components/schemas/User/properties/password'
+      responses:
+        200:
+          description: OK
+          headers:
+            X-Rate-Limit:
+              schema:
+                type: integer
+                format: int32
+              description: calls per hour allowed by the user.
+            X-Expires-After:
+              schema:
+                type: string
+                format: date-time
+              description: date in UTC when token expires.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                  data:
+                    type: object
+                    properties:
+                      accessToken:
+                        type: string
+                        example: admin-token
+        400:
+          $ref: '#/components/responses/InvalidUser'
 components:
   securitySchemes:
     AccessTokenAuth:

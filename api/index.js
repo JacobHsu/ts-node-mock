@@ -60,6 +60,8 @@ server.listen(port);
 server.on('error', onError);
 console.log('http://localhost:' + port + '/mock-api/v1/user');
 console.log('http://localhost:' + port + '/mock-api/v1/users');
+console.log('http://localhost:' + port + '/mock-api/v1/users/login');
+
 // Event listener for HTTP server "error" event.
 function onError(error) {
   if (error.syscall !== 'listen') {

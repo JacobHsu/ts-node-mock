@@ -28,6 +28,8 @@ const getTransactions = (req, res) => {
 };
 exports.getUserInfo = getTransactions;
 
+
+
 const userList = [
   {
       id: 0,
@@ -52,6 +54,27 @@ const userList = [
       roles: ['editor'],
   }
 ];
+
+exports.login = (req, res) => {
+  const { username } = req.body;
+  console.log(33333, username)
+  for (const user of userList) {
+      if (user.username === username) {
+          return res.json({
+              code: 20000,
+              data: {
+                  accessToken: username + '-token'
+              }
+          });
+      }
+  }
+  return res.status(400).json({
+      code: 50004,
+      messaege: 'Invalid User'
+  });
+};
+// exports.login = login;
+
 exports.getUsers = (req, res) => {
   const { name } = req.query;
   const users = userList.filter(user => {
