@@ -14,13 +14,56 @@ tags:
   - name: mock
     description: Mock data related api.
 paths:
+  /login:
+    post:
+      tags:
+        - login
+      summary: Logs user into the system
+      description: Use username and password to login.
+      operationId: userlogin
+      parameters:
+        - name: username
+          in: query
+          required: true
+          description: The user name for login.
+          schema:
+            $ref: '#/components/schemas/User/properties/username'
+        - name: password
+          in: query
+          required: true
+          description: The password for login in clear text.
+          schema:
+            $ref: '#/components/schemas/User/properties/password'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                  data:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                        format: int32
+                      items:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/User'
+        400:
+          $ref: '#/components/responses/InvalidUser'
   /login/get:
     get:
       tags:
-        - user
+        - login
       summary: Get Mock List
       description: Return a list of mock.
-      operationId: getUserInfo
+      operationId: getUserLogin
       responses:
         200:
           description: OK

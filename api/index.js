@@ -58,6 +58,7 @@ const server = http_1.default.createServer(app);
 // Listen on provided port, on all network interfaces.
 server.listen(port);
 server.on('error', onError);
+console.log('http://localhost:' + port + '/mock-api/login');
 console.log('http://localhost:' + port + '/mock-api/login/get');
 console.log('http://localhost:' + port + '/mock-api/user');
 console.log('http://localhost:' + port + '/mock-api/users');

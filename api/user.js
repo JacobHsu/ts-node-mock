@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getUserInfo = void 0;
+//exports.getUserInfo = void 0;
 const tslib_1 = require("tslib");
 const faker_1 = tslib_1.__importDefault(require("faker"));
 
@@ -26,7 +26,7 @@ const getTransactions = (req, res) => {
         type:"success"
     });
 };
-exports.getUserInfo = getTransactions;
+exports.getUserLogin = getTransactions;
 
 
 
