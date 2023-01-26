@@ -57,7 +57,6 @@ const userList = [
 
 exports.login = (req, res) => {
   const { username } = req.body;
-  console.log(33333, username)
   for (const user of userList) {
       if (user.username === username) {
           return res.json({
