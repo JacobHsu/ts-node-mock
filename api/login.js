@@ -8,23 +8,25 @@ const getUserLogin = (req, res) => {
     return res.json({
         code: 0,
         result: {
+          userId: "3",
+          username: "jacob",
+          realName: "Hello Jacob",
+          avatar: "https://q1.qlogo.cn/g?b=qq&nk=10000&s=640",
+          desc: "manager",
+          password: "88888888",
+          token: faker_1.default.datatype.uuid(),
           roles: [
             {
-                "roleName": "Super Man",
-                "value": "super"
+              "roleName": "Super Admin",
+              "value": "super"
             }
-          ],
-          userId: "3",
-          username: "admin",
-          realName: "Jacob",
-          token: faker_1.default.datatype.uuid(),
-          desc: "manager"
+          ]
         },
         message:"ok",
         type:"success"
     });
 };
-exports.getLogin = getUserLogin;
+exports.getUserInfo = getUserLogin;
 
 const userList = [
     {

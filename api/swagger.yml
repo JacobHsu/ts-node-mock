@@ -57,13 +57,13 @@ paths:
                           $ref: '#/components/schemas/User'
         400:
           $ref: '#/components/responses/InvalidUser'
-  /login/get:
+  /getUserInfo:
     get:
       tags:
-        - login
-      summary: Get Mock List
+        - getUserInfo
+      summary: Get User Info
       description: Return a list of mock.
-      operationId: getUserLogin
+      operationId: getUserInfo
       responses:
         200:
           description: OK
@@ -84,7 +84,7 @@ paths:
                       items:
                         type: array
                         items:
-                          $ref: '#/components/schemas/Transaction'
+                          $ref: '#/components/schemas/User'
   /user:
     get:
       tags:
