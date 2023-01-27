@@ -33,6 +33,8 @@ https://vben-node-mock-jacobhsu.vercel.app/mock-api/v1/user
 
 For backwards compatability purposes, there are two naming conventions for configuration files used by Vercel CLI (for example `vercel.json` and `now.json`). 
 
+[Deploy a Serverless Node.js application to Vercel in 5 minutes](https://dev.to/adafycheng/deploy-nodejs-application-to-vercel-in-5-minutes-171m)
+
 ## api
 
 https://vue-typescript-admin-mock-server-armour.vercel.app/mock-api/v1/users/login  
