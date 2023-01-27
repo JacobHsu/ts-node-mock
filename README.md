@@ -28,6 +28,7 @@ HTTP request logger middleware for node.js
 https://vercel.com/jacobhsu/vben-node-mock
 
 https://vben-node-mock-jacobhsu.vercel.app/mock-api/v1/user
+https://vben-node-mock-jacobhsu.vercel.app/mock-api/users
 
 [Conflicting Configuration Files](https://vercel.com/docs/platform/frequently-asked-questions?query=now.json#conflicting-configuration-files)
 
