@@ -28,6 +28,14 @@ const getUserLogin = (req, res) => {
 };
 exports.getUserInfo = getUserLogin;
 
+exports.logout = (req, res) => {
+    return res.json({
+        code: 0,
+        message:"Token has been destroyed",
+        type:"success"
+    });
+};
+
 const userList = [
     {
         id: 0,

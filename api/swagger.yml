@@ -57,6 +57,24 @@ paths:
                           $ref: '#/components/schemas/User'
         400:
           $ref: '#/components/responses/InvalidUser'
+  /logout:
+    get:
+      tags:
+        - users
+      summary: Logs out current logged in user session
+      description: Log out current session.
+      operationId: logout
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    format: int32  
   /getUserInfo:
     get:
       tags:
