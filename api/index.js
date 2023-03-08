@@ -60,6 +60,7 @@ server.listen(port);
 server.on('error', onError);
 console.log('http://localhost:' + port + '/mock-api/login');
 console.log('http://localhost:' + port + '/mock-api/getUserInfo');
+console.log('http://localhost:' + port + '/mock-api/getStockInfo');
 console.log('http://localhost:' + port + '/mock-api/logout');
 console.log('http://localhost:' + port + '/mock-api/user');
 console.log('http://localhost:' + port + '/mock-api/users');
