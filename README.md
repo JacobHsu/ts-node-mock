@@ -7,6 +7,7 @@ Armour / [vue-typescript-admin-mock-server](https://github.com/Armour/vue-typesc
 `yarn mock`  
 http://localhost:6580/mock-api/user  
 http://localhost:6580/mock-api/getStockInfo  
+https://vben-node-mock-jacobhsu.vercel.app/mock-api/getStockInfo 
 
 swagger.yml
 
