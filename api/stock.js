@@ -25,6 +25,7 @@ const getTransactions = (req, res) => {
         if(!stockCode.includes('-KY')){
           const transactionVolume = $(cols[4]).text();
           const transactionAmount = $(cols[5]).text();
+          const price = $(cols[8]).text();
           const upOrDown = $(cols[9]).text();
           const priceChange = $(cols[10]).text();
           if (upOrDown === '-') {
@@ -32,6 +33,7 @@ const getTransactions = (req, res) => {
               result.push({
                 stockName,
                 stockCode,
+                price,
                 priceChange: `${upOrDown}${priceChange}`,
                 transactionVolume,
                 transactionAmount,
@@ -41,7 +43,6 @@ const getTransactions = (req, res) => {
         }
       });
 
-      // console.log(JSON.stringify(resultMin, null, 2));
       return res.json({
         code: 0,
         result: result,
