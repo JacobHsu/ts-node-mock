@@ -43,6 +43,9 @@ const getTransactions = (req, res) => {
         }
       });
 
+      // Sort the result array by price in ascending order
+      result.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+
       return res.json({
         code: 0,
         result: result,
